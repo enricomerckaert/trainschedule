@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NMBS Express</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/slate/bootstrap.min.css" rel="stylesheet" integrity="sha384-RpX8okQqCyUNG7PlOYNybyJXYTtGQH+7rIKiVvg1DLg6jahLEk47VvpUyS+E2/uJ" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="icon" href="assets/resources/train-on-railroad.png">
+  <link rel="stylesheet" href="assets/resources/jquery.datetimepicker.min.css">
+  <script src="assets/resources/jquery.js"></script>
+  <script src="assets/resources/jquery.datetimepicker.full.js"></script>
+
+
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="text-center" id="heading">NMBS Express</h1>
+      <h2 class="text-center" id="subHeading">Sometimes On Track</h2>
+      <p class="pull-right" id="currentTime"></p>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-9">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Train Schedule</h3>
+          </div>
+          <div class="panel-body">
+            <table class="table table-hover" id="train-table">
+              <thead>
+                <tr>
+                  <th>Vertrek</th>
+                  <th>Aankomst</th>
+                  <th>Station</th>
+                  <th class="text-center">Spoor</th>
+                  <th class="text-center">Richting</th>
+                  <th class="text-center">Spoor</th>
+                  <th class="text-center">Duur</th>
+                </tr>
+              </thead>
+              <tbody id="train-table-rows">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-3">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Route</h3>
+            <div>
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <label>Van</label>
+                    <input list="trainstations" type="text" value="" class="form-control form-field" id="origin" placeholder="Antwerpen" required>
+					<datalist id="trainstations">
+					
+					</datalist>
+                  </div>
+                  <div class="form-group">
+                    <label>Naar</label>
+                    <input list="trainstations" type="text" value="" class="form-control form-field" id="destination" placeholder="Brussel" required>
+                  </div>
+                  <div class="form-group">
+                    <label>Tijd</label>
+	                  <input type="text" value="" class="form-control form-field" id="departureTime" placeholder="HH:mm" required>
+                  </div>
+                  <div class="form-group">
+                    <label>Datum</label>
+                    <input type="text" value="" class="form-control form-field" id="departureDate" placeholder="dd-mm-yyyy" required>
+                  </div>
+                  <button type="submit" class="btn btn-default" id="submit">Zoek</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js" integrity="sha256-59IZ5dbLyByZgSsRE3Z0TjDuX7e1AiqW5bZ8Bg50dsU=" crossorigin="anonymous"></script>
+
+</body>
+</html>
